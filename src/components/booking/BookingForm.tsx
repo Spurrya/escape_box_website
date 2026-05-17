@@ -378,7 +378,7 @@ function DetailsStep({
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="text-white/70">Number of Participants</FormLabel>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 flex-wrap">
                   <button
                     type="button"
                     onClick={() => field.onChange(Math.max(2, Number(field.value) - 1))}
@@ -409,6 +409,16 @@ function DetailsStep({
                   </span>
                 </div>
                 <FormMessage />
+                <p className="text-white/40 text-xs mt-1">
+                  Group larger than 10?{' '}
+                  <a
+                    href="mailto:escapebox.ca@gmail.com"
+                    className="text-kiwi-green underline underline-offset-2 hover:text-kiwi-green/80"
+                  >
+                    Email us
+                  </a>{' '}
+                  to coordinate.
+                </p>
               </FormItem>
             )}
           />
