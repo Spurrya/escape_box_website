@@ -26,7 +26,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Experiences', href: '#experiences', onClick: handleExperiencesClick },
     { name: 'Contact', href: '/contact' },
-    { name: 'Book Now', href: '/experiences' },
+    { name: 'Book Now', href: '/booking' },
   ];
 
   return (

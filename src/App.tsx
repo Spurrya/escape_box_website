@@ -13,6 +13,7 @@ import Experience1 from "./pages/Experience1";
 import Experience2 from "./pages/Experience2";
 import Experience3 from "./pages/Experience3";
 import Camera from "./pages/Camera";
+import Booking from "./pages/Booking";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/camera" element={<Camera />} />
+          <Route path="/booking" element={<Booking />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
