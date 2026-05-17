@@ -27,10 +27,6 @@ const detailsSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email'),
   phone: z.string().optional(),
-  participants: z.coerce
-    .number()
-    .min(2, 'Minimum 2 participants')
-    .max(10, 'Maximum 10 participants'),
 });
 
 type DetailsValues = z.infer<typeof detailsSchema>;
@@ -86,14 +82,20 @@ function StepIndicator({ step }: { step: 1 | 2 | 3 }) {
 function ExperienceStep({
   selected,
   onSelect,
+  participants,
+  onParticipantsChange,
+  onNext,
 }: {
   selected: Experience | null;
   onSelect: (e: Experience) => void;
+  participants: number;
+  onParticipantsChange: (n: number) => void;
+  onNext: () => void;
 }) {
   return (
     <div>
       <h2 className="text-2xl font-display font-bold text-white mb-2">Choose your experience</h2>
-      <p className="text-white/50 mb-6 text-sm">Select the adventure you'd like to book.</p>
+      <p className="text-white/50 mb-6 text-sm">Select the adventure and how many people are joining.</p>
       <div className="grid gap-4">
         {experienceData.map((exp) => {
           const available = exp.publiclyLaunched;
@@ -147,6 +149,56 @@ function ExperienceStep({
             </button>
           );
         })}
+      </div>
+
+      {/* Participants picker */}
+      <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+        <p className="text-white/70 text-sm font-medium mb-3">Number of Participants</p>
+        <div className="flex items-center gap-3 flex-wrap">
+          <button
+            type="button"
+            onClick={() => onParticipantsChange(Math.max(2, participants - 1))}
+            className="w-9 h-9 rounded-lg border border-white/15 bg-white/5 text-white flex items-center justify-center hover:bg-white/10 transition-colors"
+          >
+            −
+          </button>
+          <span className="w-8 text-center text-white font-bold text-lg">{participants}</span>
+          <button
+            type="button"
+            onClick={() => onParticipantsChange(Math.min(10, participants + 1))}
+            className="w-9 h-9 rounded-lg border border-white/15 bg-white/5 text-white flex items-center justify-center hover:bg-white/10 transition-colors"
+          >
+            +
+          </button>
+          {selected && (
+            <span className="text-white/40 text-sm">
+              × {selected.price} ={' '}
+              <span className="text-white font-medium">
+                ${(participants * parseInt(selected.price.replace(/[^0-9]/g, ''))).toFixed(0)} CAD
+              </span>
+            </span>
+          )}
+        </div>
+        <p className="text-white/40 text-xs mt-2">
+          Group larger than 10?{' '}
+          <a
+            href="mailto:escapebox.ca@gmail.com"
+            className="text-kiwi-green underline underline-offset-2 hover:text-kiwi-green/80"
+          >
+            Email us
+          </a>{' '}
+          to coordinate.
+        </p>
+      </div>
+
+      <div className="flex justify-end mt-6">
+        <Button
+          onClick={onNext}
+          disabled={!selected}
+          className="bg-kiwi-green hover:bg-kiwi-green/90 text-white"
+        >
+          Continue
+        </Button>
       </div>
     </div>
   );
@@ -278,6 +330,7 @@ function DetailsStep({
   selectedExperience,
   selectedDate,
   selectedSlot,
+  participants,
   onBack,
   onSubmit,
   submitting,
@@ -286,6 +339,7 @@ function DetailsStep({
   selectedExperience: Experience;
   selectedDate: Date;
   selectedSlot: string;
+  participants: number;
   onBack: () => void;
   onSubmit: (v: DetailsValues) => Promise<void>;
   submitting: boolean;
@@ -311,6 +365,10 @@ function DetailsStep({
           <div className="flex justify-between">
             <span>Time</span>
             <span className="font-medium text-white">{selectedSlot}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Participants</span>
+            <span className="font-medium text-white">{participants}</span>
           </div>
         </div>
       </div>
@@ -369,56 +427,6 @@ function DetailsStep({
                   />
                 </FormControl>
                 <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="participants"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-white/70">Number of Participants</FormLabel>
-                <div className="flex items-center gap-3 flex-wrap">
-                  <button
-                    type="button"
-                    onClick={() => field.onChange(Math.max(2, Number(field.value) - 1))}
-                    className="w-9 h-9 rounded-lg border border-white/15 bg-white/5 text-white flex items-center justify-center hover:bg-white/10 transition-colors"
-                  >
-                    −
-                  </button>
-                  <span className="w-8 text-center text-white font-bold text-lg">
-                    {field.value}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => field.onChange(Math.min(10, Number(field.value) + 1))}
-                    className="w-9 h-9 rounded-lg border border-white/15 bg-white/5 text-white flex items-center justify-center hover:bg-white/10 transition-colors"
-                  >
-                    +
-                  </button>
-                  <span className="text-white/40 text-sm">
-                    × {selectedExperience.price} ={' '}
-                    <span className="text-white font-medium">
-                      $
-                      {(
-                        Number(field.value) *
-                        parseInt(selectedExperience.price.replace(/[^0-9]/g, ''))
-                      ).toFixed(0)}{' '}
-                      CAD
-                    </span>
-                  </span>
-                </div>
-                <FormMessage />
-                <p className="text-white/40 text-xs mt-1">
-                  Group larger than 10?{' '}
-                  <a
-                    href="mailto:escapebox.ca@gmail.com"
-                    className="text-kiwi-green underline underline-offset-2 hover:text-kiwi-green/80"
-                  >
-                    Email us
-                  </a>{' '}
-                  to coordinate.
-                </p>
               </FormItem>
             )}
           />
@@ -522,6 +530,7 @@ export default function BookingForm() {
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [done, setDone] = useState(false);
   const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
+  const [participants, setParticipants] = useState(2);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
   const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
   const [slots, setSlots] = useState<TimeSlot[]>([]);
@@ -531,7 +540,7 @@ export default function BookingForm() {
 
   const form = useForm<DetailsValues>({
     resolver: zodResolver(detailsSchema),
-    defaultValues: { name: '', email: '', phone: '', participants: 2 },
+    defaultValues: { name: '', email: '', phone: '' },
   });
 
   useEffect(() => {
@@ -559,7 +568,7 @@ export default function BookingForm() {
           experienceTitle: selectedExperience.title,
           date: format(selectedDate, 'yyyy-MM-dd'),
           timeSlot: selectedSlot,
-          participants: values.participants,
+          participants,
           name: values.name,
           email: values.email,
           phone: values.phone,
@@ -583,7 +592,7 @@ export default function BookingForm() {
         experience={selectedExperience!}
         date={selectedDate!}
         slot={selectedSlot!}
-        participants={form.getValues('participants')}
+        participants={participants}
         name={form.getValues('name')}
       />
     );
@@ -596,10 +605,10 @@ export default function BookingForm() {
         {step === 1 && (
           <ExperienceStep
             selected={selectedExperience}
-            onSelect={(exp) => {
-              setSelectedExperience(exp);
-              setStep(2);
-            }}
+            onSelect={setSelectedExperience}
+            participants={participants}
+            onParticipantsChange={setParticipants}
+            onNext={() => setStep(2)}
           />
         )}
         {step === 2 && (
@@ -621,6 +630,7 @@ export default function BookingForm() {
             selectedExperience={selectedExperience!}
             selectedDate={selectedDate!}
             selectedSlot={selectedSlot!}
+            participants={participants}
             onBack={() => setStep(2)}
             onSubmit={handleSubmit}
             submitting={submitting}
