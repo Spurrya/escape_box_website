@@ -44,8 +44,8 @@ export const experienceData: Experience[] = [
     route: "/experience1",
     bookingLink: "https://app.escapeworld.ca/book/ep1",
     category: "outdoor",
-    teamSize: "2 to 8 Agents",
-    players: "2 to 8 Agents",
+    teamSize: "2 to 10 Agents",
+    players: "2 to 10 Agents",
     publiclyLaunched: true
   },
   {
@@ -69,8 +69,8 @@ export const experienceData: Experience[] = [
     route: "/experience2",
     bookingLink: "https://app.escapeworld.ca/book/ep2",
     category: "outdoor",
-    teamSize: "2 to 8 Agents",
-    players: "2 to 8 Agents",
+    teamSize: "2 to 10 Agents",
+    players: "2 to 10 Agents",
     publiclyLaunched: false
   },
   {
@@ -94,8 +94,8 @@ export const experienceData: Experience[] = [
     route: "/experience3",
     bookingLink: "https://app.escapeworld.ca/book/ep3",
     category: "indoor",
-    teamSize: "2 to 8 Art Students",
-    players: "2 to 8 Art Students",
+    teamSize: "2 to 10 Art Students",
+    players: "2 to 10 Art Students",
     publiclyLaunched: false
   }
 ];

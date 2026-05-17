@@ -30,7 +30,7 @@ const detailsSchema = z.object({
   participants: z.coerce
     .number()
     .min(2, 'Minimum 2 participants')
-    .max(8, 'Maximum 8 participants'),
+    .max(10, 'Maximum 10 participants'),
 });
 
 type DetailsValues = z.infer<typeof detailsSchema>;
@@ -391,7 +391,7 @@ function DetailsStep({
                   </span>
                   <button
                     type="button"
-                    onClick={() => field.onChange(Math.min(8, Number(field.value) + 1))}
+                    onClick={() => field.onChange(Math.min(10, Number(field.value) + 1))}
                     className="w-9 h-9 rounded-lg border border-white/15 bg-white/5 text-white flex items-center justify-center hover:bg-white/10 transition-colors"
                   >
                     +
