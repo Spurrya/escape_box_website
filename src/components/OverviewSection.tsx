@@ -20,7 +20,7 @@ const OverviewSection = () => {
               Join us on an immersive journey through the streets of Toronto, where the city itself becomes your game board and every alley, landmark, and hidden corner holds a secret waiting to be uncovered.
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Escape Box fuses the adrenaline of a scavenger hunt with the brain-twisting thrill of escape room puzzles. Each box is packed with cryptic clues, curious objects, and tangible tools to help you navigate a series of puzzles that blur the line between the real and the surreal.
+              Escape Box fuses the adrenaline of an immersive city adventure with the brain-twisting thrill of escape room puzzles. Each box is packed with cryptic clues, curious objects, and tangible tools to help you navigate a series of puzzles that blur the line between the real and the surreal.
             </p>
           </div>
 

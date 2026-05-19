@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: "Is this the same as a regular escape room?",
-    a: "Not at all. Traditional escape rooms lock you in one room for 60 minutes. Escape Box takes you outside - the puzzles are woven into Toronto's real streets, murals, and public spaces. Think of it as an escape room meets city-wide scavenger hunt.",
+    a: "Not at all. Traditional escape rooms lock you in one room for 60 minutes. Escape Box takes you outside - the puzzles are woven into Toronto's real streets, murals, and public spaces. Think of it as an immersive city adventure built around escape room mechanics.",
   },
   {
     q: "What happens if we get stuck?",
