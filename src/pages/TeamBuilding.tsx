@@ -44,18 +44,21 @@ const formats = [
     size: "4-10 people",
     boxes: "1-2 boxes",
     desc: "Ideal for department outings, startup teams, or agency offsites. One box per team; compare finish times.",
+    comingSoon: false,
   },
   {
     label: "Mid-Size Corporate Group",
     size: "10-30 people",
     boxes: "2-5 boxes",
     desc: "Split into teams and race. A natural competitive energy emerges without anyone having to force it.",
+    comingSoon: true,
   },
   {
     label: "Large Group Event",
     size: "30-100+ people",
     boxes: "Custom quote",
     desc: "Multiple waves, staggered start times, or simultaneous race - we'll design the format around your headcount and schedule.",
+    comingSoon: true,
   },
 ];
 
@@ -167,11 +170,16 @@ const TeamBuilding = () => {
             Group Formats
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
-            From a 4-person team lunch to a 100-person company retreat - we have a format for every size.
+            Currently booking teams of up to 10. Larger group formats are coming soon.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
-            {formats.map(({ label, size, boxes, desc }) => (
-              <div key={label} className="border border-border rounded-xl p-6 flex flex-col gap-3">
+            {formats.map(({ label, size, boxes, desc, comingSoon }) => (
+              <div key={label} className={`relative border rounded-xl p-6 flex flex-col gap-3 ${comingSoon ? "border-border opacity-60" : "border-border"}`}>
+                {comingSoon && (
+                  <span className="absolute top-4 right-4 text-xs font-semibold bg-muted text-muted-foreground px-2 py-1 rounded-full">
+                    Coming Soon
+                  </span>
+                )}
                 <h3 className="font-bold text-foreground text-xl">{label}</h3>
                 <div className="flex gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1"><Users className="w-4 h-4" />{size}</span>
