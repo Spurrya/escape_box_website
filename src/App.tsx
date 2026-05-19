@@ -14,6 +14,8 @@ import Experience2 from "./pages/Experience2";
 import Experience3 from "./pages/Experience3";
 import Camera from "./pages/Camera";
 import Booking from "./pages/Booking";
+import FAQ from "./pages/FAQ";
+import TeamBuilding from "./pages/TeamBuilding";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/camera" element={<Camera />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/team-building" element={<TeamBuilding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

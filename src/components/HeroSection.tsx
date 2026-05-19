@@ -59,10 +59,10 @@ const HeroSection = () => {
         {/* Darker transparent rectangle behind text */}
         <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-8 sm:p-12">
           <h1 className="text-4xl sm:text-6xl font-bold font-display text-white mb-6 leading-tight">
-            Welcome to <span className="text-kiwi-green-light">Kiwi Kingdom's</span> Escape Box
+            Toronto's <span className="text-kiwi-green-light">Outdoor Escape Room</span> & Scavenger Hunt
           </h1>
           <p className="text-xl sm:text-2xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Where Toronto becomes your playground and every street holds a mystery waiting to be solved.
+            Solve puzzles through downtown Toronto's streets, murals, and hidden landmarks — no room required.
           </p>
           <div className="flex flex-col items-center gap-6">
             <Button size="lg" className="bg-kiwi-green hover:bg-kiwi-green/90 text-white gap-2" onClick={scrollToExperiences}>

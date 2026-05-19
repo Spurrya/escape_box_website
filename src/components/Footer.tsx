@@ -22,12 +22,21 @@ const Footer = () => {
             </p>
           </div>
           
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8 flex-wrap justify-center md:justify-end">
+            <Link to="/experiences" className="text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors">
+              Experiences
+            </Link>
+            <Link to="/team-building" className="text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors">
+              Team Building
+            </Link>
+            <Link to="/faq" className="text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors">
+              FAQ
+            </Link>
+            <Link to="/booking" className="text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors">
+              Book Now
+            </Link>
             <Link to="/about" className="text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors">
               About
-            </Link>
-            <Link to="/" className="text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors">
-              Escape Box
             </Link>
             <Link to="/contact" className="text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors">
               Contact

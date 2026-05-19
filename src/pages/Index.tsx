@@ -8,8 +8,15 @@ import InstagramFeed from "@/components/InstagramFeed";
 import { Button } from "@/components/ui/button";
 import { Box } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useSEO } from "@/hooks/useSEO";
 
 const Index = () => {
+  useSEO({
+    title: 'Outdoor Escape Room Toronto | Escape Box by Kiwi Kingdom',
+    description: "Toronto's only outdoor escape room. Solve puzzles, hunt street art, explore downtown. 1.5 hrs. Great for groups, dates & team building. Book online.",
+    canonical: 'https://www.escapebox.ca/',
+  });
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Navbar />
