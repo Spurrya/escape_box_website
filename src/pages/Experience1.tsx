@@ -94,7 +94,7 @@ const Experience1 = () => {
     {
       title: "MISSION BRIEFING",
       duration: "15 mins",
-      description: "Luna is trapped between in unreality and she needs you to save her! Meet your NPC guide and begin your adventure.",
+      description: "Luna is trapped in unreality and she needs you to save her! Meet your NPC guide and begin your adventure.",
       status: "critical"
     },
     {
@@ -353,7 +353,7 @@ const Experience1 = () => {
             <div className="space-y-4">
               <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                 Step into Toronto's most mind-bending adventure where reality and unreality merge before your eyes!
-                Navigate the vibrant streets of Queen West along side a REVEAL orientation spealist. Solve puzzles and complete challenges as dimensions blur and the city reveals its hidden secrets.
+                Navigate the vibrant streets of Queen West alongside a REVEAL orientation specialist. Solve puzzles and complete challenges as dimensions blur and the city reveals its hidden secrets.
               </p>
               <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                 Perfect for tourists and locals who want to experience Toronto's authentic street culture while being part of
@@ -411,7 +411,7 @@ const Experience1 = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Users className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
-                    <span className="text-sm md:text-base text-gray-300">Team size: Up to 16 Agents</span>
+                    <span className="text-sm md:text-base text-gray-300">Team size: Up to 10 Agents</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Clock className="w-4 h-4 md:w-5 md:h-5 text-violet-400" />
@@ -443,7 +443,7 @@ const Experience1 = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Users className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
-                    <span className="text-sm md:text-base text-gray-300">Team size: Up to 16 Agents</span>
+                    <span className="text-sm md:text-base text-gray-300">Team size: Up to 10 Agents</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Clock className="w-4 h-4 md:w-5 md:h-5 text-violet-400" />
