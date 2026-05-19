@@ -12,7 +12,7 @@ import { useSEO } from "@/hooks/useSEO";
 
 const Index = () => {
   useSEO({
-    title: 'Outdoor Escape Room Toronto | Escape Box by Kiwi Kingdom',
+    title: 'Escape Box - Immersive Games in Toronto',
     description: "Toronto's only outdoor escape room. Solve puzzles, hunt street art, explore downtown. 1.5 hrs. Great for groups, dates & team building. Book online.",
     canonical: 'https://www.escapebox.ca/',
   });
