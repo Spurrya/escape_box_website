@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "What should I wear or bring?",
-    a: "Wear comfortable walking shoes. Dress for the weather - the experience is fully outdoors. You'll need a smartphone to access digital clues and a pen is handy for some puzzles (one is included in the box).",
+    a: "Wear comfortable walking shoes and dress for the weather - the experience is fully outdoors. Your actor-guide will have everything you need. Just bring yourself and your curiosity.",
   },
   {
     q: "What happens if it rains?",
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     q: "What happens if we get stuck?",
-    a: "Hints are available through the game's digital interface. You can request as many as you need - there's no penalty. The goal is to have fun, not to frustrate.",
+    a: "Your actor-guide is there with you the whole time and will nudge you in the right direction if you're stuck. The goal is to have fun, not to frustrate.",
   },
   {
     q: "Can I book a private event or bachelorette party?",

@@ -19,7 +19,7 @@ const features = [
   {
     icon: Clock,
     title: "90 Minutes, No Fuss",
-    body: "Pick up your box, solve the route, return. No equipment setup, no facilitator scripts - the game runs itself.",
+    body: "Pick up your box and let your actor-guide lead the way. Everything is taken care of — just show up and immerse yourself.",
   },
   {
     icon: Lightbulb,
@@ -73,8 +73,8 @@ const faqItems = [
     a: "The experience is in-person in Toronto. For hybrid teams, in-person attendees can stream their run live - it makes for a surprisingly engaging watch.",
   },
   {
-    q: "Is there a facilitator?",
-    a: "No on-site facilitator is needed - the game guides itself. We're reachable by phone throughout if any team needs support.",
+    q: "Is there a guide?",
+    a: "Yes — every experience is led by a live actor-guide who facilitates the adventure from start to finish. They're part of the story, not just a host.",
   },
 ];
 
@@ -99,7 +99,7 @@ const TeamBuilding = () => {
             Outdoor Team Building in Toronto That Actually Works
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Escape Box gets your team out of the office and into the city - solving real puzzles across downtown Toronto's streets, murals, and alleyways. No trust falls. No facilitators. Just genuine collaboration.
+            Escape Box gets your team out of the office and into the city - guided by a live actor through real puzzles across downtown Toronto's streets, murals, and alleyways. No trust falls. Just genuine collaboration.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-kiwi-green hover:bg-kiwi-green/90 text-white font-semibold px-8" asChild>
@@ -193,7 +193,7 @@ const TeamBuilding = () => {
               "Physical puzzle box with all game materials",
               "Digital clue interface (mobile-optimized)",
               "Unlimited hints - no time penalty",
-              "Self-guided: no facilitator required",
+              "Live actor-guide included — fully facilitated",
               "Flexible scheduling (any day, any time)",
               "Custom group racing format for 10+ players",
               "Post-game venue recommendations nearby",
