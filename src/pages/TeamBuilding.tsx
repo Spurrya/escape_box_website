@@ -13,8 +13,8 @@ const features = [
   },
   {
     icon: Users,
-    title: "Groups of Any Size",
-    body: "From a 4-person startup to a 50-person all-hands, we can scale. Multiple boxes run simultaneously so large teams race each other.",
+    title: "Small Groups Welcome",
+    body: "Currently booking teams of up to 10. Perfect for department outings, startup teams, and close-knit groups.",
   },
   {
     icon: Clock,
