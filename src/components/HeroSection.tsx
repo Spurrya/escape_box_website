@@ -59,7 +59,7 @@ const HeroSection = () => {
         {/* Darker transparent rectangle behind text */}
         <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-8 sm:p-12">
           <h1 className="text-4xl sm:text-6xl font-bold font-display text-white mb-6 leading-tight">
-            Toronto's Most <span className="text-kiwi-green-light">Immersive</span> Outdoor Escape Room
+            Toronto's <span className="text-kiwi-green-light">Immersive</span> Outdoor Escape Room
           </h1>
           <p className="text-xl sm:text-2xl text-white/80 mb-8 max-w-2xl mx-auto">
             Solve puzzles through downtown Toronto's streets, murals, and hidden landmarks — no room required.
