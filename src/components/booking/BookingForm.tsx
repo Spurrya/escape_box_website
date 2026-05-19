@@ -276,6 +276,10 @@ function DateTimeStep({
             <div className="flex items-center justify-center h-32 gap-2 text-white/40 text-sm">
               <Loader2 className="w-4 h-4 animate-spin" /> Loading times…
             </div>
+          ) : slots.length === 0 ? (
+            <div className="flex items-center justify-center h-32 text-white/30 text-sm">
+              No times available for this date
+            </div>
           ) : (
             <div>
               <p className="text-white/50 text-xs mb-3 font-medium uppercase tracking-wider">

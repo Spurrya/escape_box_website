@@ -14,22 +14,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: 'date query param required (YYYY-MM-DD)' });
   }
 
-  const supabase = createClient(
-    process.env.SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_KEY!
-  );
+  let bookedSlots = new Set<string>();
 
-  const { data, error } = await supabase
-    .from('bookings')
-    .select('time_slot')
-    .eq('date', date);
-
-  if (error) {
-    console.error(error);
-    return res.status(500).json({ error: 'Database error' });
+  if (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_KEY) {
+    const supabase = createClient(
+      process.env.SUPABASE_URL,
+      process.env.SUPABASE_SERVICE_KEY
+    );
+    const { data, error } = await supabase
+      .from('bookings')
+      .select('time_slot')
+      .eq('date', date);
+    if (error) {
+      console.error(error);
+      return res.status(500).json({ error: 'Database error' });
+    }
+    bookedSlots = new Set((data ?? []).map((b: { time_slot: string }) => b.time_slot));
   }
-
-  const bookedSlots = new Set((data ?? []).map((b: { time_slot: string }) => b.time_slot));
 
   // Parse at noon to avoid UTC/local timezone edge cases
   const d = new Date(`${date}T12:00:00`);
