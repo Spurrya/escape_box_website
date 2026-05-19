@@ -233,7 +233,7 @@ const Experience3 = () => {
                       </div>
                       <div className="flex items-center gap-3 bg-white/80 p-3 rounded-lg backdrop-blur-sm">
                         <Users className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 flex-shrink-0" />
-                        <span className="text-sm sm:text-base text-gray-800 font-medium">Up to 16 students</span>
+                        <span className="text-sm sm:text-base text-gray-800 font-medium">Up to 10 students</span>
                       </div>
                       <div className="flex items-center gap-3 bg-white/80 p-3 rounded-lg backdrop-blur-sm">
                         <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600 flex-shrink-0" />

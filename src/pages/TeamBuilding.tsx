@@ -105,7 +105,7 @@ const TeamBuilding = () => {
             Escape Box gets your team out of the office and into the city - guided by a live actor through real puzzles across downtown Toronto's streets, murals, and alleyways. No trust falls. Just genuine collaboration.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-kiwi-green hover:bg-kiwi-green/90 text-white font-semibold px-8" asChild>
+            <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8" asChild>
               <Link to="/booking">Book for Your Team</Link>
             </Button>
             <Button size="lg" variant="outline" className="font-semibold px-8" asChild>
@@ -242,7 +242,7 @@ const TeamBuilding = () => {
             Small teams can book directly. For groups over 20, contact us for custom pricing and scheduling.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-kiwi-green hover:bg-kiwi-green/90 text-white font-semibold px-8" asChild>
+            <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8" asChild>
               <Link to="/booking">Book Now</Link>
             </Button>
             <Button size="lg" variant="outline" className="font-semibold px-8" asChild>

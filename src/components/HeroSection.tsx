@@ -65,7 +65,7 @@ const HeroSection = () => {
             Solve puzzles through downtown Toronto's streets, murals, and hidden landmarks — no room required.
           </p>
           <div className="flex flex-col items-center gap-6">
-            <Button size="lg" className="bg-kiwi-green hover:bg-kiwi-green/90 text-white gap-2" onClick={scrollToExperiences}>
+            <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white gap-2" onClick={scrollToExperiences}>
               <Box className="w-5 h-5 text-icon" />
               <Link to="/experiences">
                 Book Your Adventure

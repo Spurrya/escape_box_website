@@ -41,7 +41,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 py-3">
           <Button
             size="lg"
-            className="w-full bg-kiwi-green text-white hover:bg-kiwi-green/90 font-semibold gap-2 border-0"
+            className="w-full bg-emerald-500 text-white hover:bg-emerald-600 font-semibold gap-2 border-0"
             asChild
           ><Link to="/experiences">
               <Box className="w-5 h-5 text-icon" />
