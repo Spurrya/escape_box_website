@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: "Where does the experience take place?",
-    a: "The adventure starts at BoardGame2Go, 438 Richmond St W (Queen & Spadina), Toronto. From there you explore the surrounding streets, alleyways, and street-art corridors on foot.",
+    a: "Your meeting point is provided after booking and varies based on the adventure you choose. From there you explore the surrounding streets, alleyways, and street-art corridors on foot.",
   },
   {
     q: "How long does Escape Box take?",

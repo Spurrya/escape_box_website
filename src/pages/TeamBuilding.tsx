@@ -141,7 +141,7 @@ const TeamBuilding = () => {
           </h2>
           <ol className="space-y-6">
             {[
-              { step: "1", title: "Pick Up Your Box(es)", body: "Meet at BoardGame2Go, 438 Richmond St W (Queen & Spadina). Collect one box per team of 4-6." },
+              { step: "1", title: "Pick Up Your Box(es)", body: "Your meeting point is provided after booking and varies based on the adventure. Collect one box per team of 4-6." },
               { step: "2", title: "Hit the Streets", body: "Open the box and follow the first clue into downtown Toronto. Puzzles are tied to real locations, murals, and landmarks along the route." },
               { step: "3", title: "Solve, Collaborate, Compete", body: "Work through the puzzle sequence together. If multiple teams are racing, track each other's progress in real time." },
               { step: "4", title: "Finish & Debrief", body: "Return the box and head to one of the nearby Queen West spots for a group debrief. We can suggest spots based on your group size." },
