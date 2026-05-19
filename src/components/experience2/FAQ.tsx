@@ -25,7 +25,7 @@ const FAQ = () => {
           <AccordionTrigger className="text-foreground hover:text-red-500 text-left text-lg font-medium">What if it rains during our adventure?</AccordionTrigger>
           <AccordionContent className="text-lg text-muted-foreground leading-relaxed">
             Rain adds to the atmosphere! We provide weather contingencies and some locations offer shelter. 
-            Just dress appropriately and embrace the Toronto experience in any weather. If a weather emergency occurs Escape Box will organize another time with you to play enjoy the experience when it is safe to do so.
+            Just dress appropriately and embrace the Toronto experience in any weather. If a weather emergency occurs Escape Box will organize another time with you to play and enjoy the experience when it is safe to do so.
           </AccordionContent>
         </AccordionItem>
         
