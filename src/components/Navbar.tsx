@@ -51,26 +51,16 @@ const Navbar = () => {
           {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-6 lg:space-x-8">
-              {navItems.map((item) =>
-                item.name === 'Book Now' ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="bg-emerald-500 hover:bg-emerald-600 text-white text-sm lg:text-base font-semibold px-4 py-2 rounded-md transition-colors"
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    onClick={item.onClick}
-                    className="text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors text-sm lg:text-base"
-                  >
-                    {item.name}
-                  </a>
-                )
-              )}
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={item.onClick}
+                  className="text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors text-sm lg:text-base"
+                >
+                  {item.name}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -91,33 +81,22 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-lg border-t">
-            {navItems.map((item) =>
-              item.name === 'Book Now' ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block mx-3 my-1 px-3 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-base font-semibold rounded-md text-center transition-colors"
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => {
-                    if (item.onClick) {
-                      item.onClick(e);
-                    } else {
-                      setIsOpen(false);
-                    }
-                  }}
-                  className="block px-3 py-2 text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors text-base font-medium"
-                >
-                  {item.name}
-                </a>
-              )
-            )}
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => {
+                  if (item.onClick) {
+                    item.onClick(e);
+                  } else {
+                    setIsOpen(false);
+                  }
+                }}
+                className="block px-3 py-2 text-[hsl(222.2,84%,4.9%)] hover:text-kiwi-green transition-colors text-base font-medium"
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
         </div>
       )}
