@@ -73,7 +73,7 @@ const faqItems = [
   },
   {
     q: "Can you accommodate remote or hybrid teams?",
-    a: "The experience is in-person in Toronto. For hybrid teams, in-person attendees can stream their run live - it makes for a surprisingly engaging watch.",
+    a: "The experience is in-person in Toronto only. All participants need to be present to take part.",
   },
   {
     q: "Is there a guide?",
